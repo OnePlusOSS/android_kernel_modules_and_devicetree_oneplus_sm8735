@@ -111,7 +111,7 @@
 					39 00 00 40 00 00 07 A1 11 11 00 00 58 80
 					39 00 00 40 00 00 07 A2 00 00 26 26 68 A0
 					39 00 00 40 00 00 07 A3 10 00 01 00 70 80
-					39 00 00 40 00 00 07 A4 00 26 00 26 74 C4
+					39 00 00 40 00 00 07 A4 00 26 00 26 5D 7B
 					15 00 00 40 00 00 02 A8 A0
 					39 00 00 40 00 00 04 FF 5A A5 15
 					15 00 00 40 00 00 02 81 01
@@ -167,6 +167,7 @@
 					15 00 00 40 00 00 02 BC 54
 					15 00 00 40 00 00 02 BD 23
 					39 00 00 40 00 00 04 FF 5A A5 00
+					15 00 00 40 00 00 02 B9 00
 					15 00 00 40 00 00 02 35 00
 					15 00 00 40 00 00 02 53 24
 					15 00 00 40 00 00 02 B9 01
@@ -902,8 +903,8 @@
 	/* fps-switch */
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_both_hv_porch";
-	qcom,dsi-supported-dfps-list = <165  144    120    90    60    30>;
-	qcom,dsi-dfps-hfp-list       = <12   68     156    164   156   1196>;
+	qcom,dsi-supported-dfps-list = <120  144    165    90    60    30>;
+	qcom,dsi-dfps-hfp-list       = <156   68    12    164   156   1196>;
 	qcom,dsi-dfps-hbp-list       = <16   16     16     16    16    560>;
 	qcom,dsi-dfps-hpw-list       = <16   16     16     16    16    16>;
 	qcom,dsi-dfps-vfp-list       = <80   80     80     980   2960  80>;
@@ -966,3 +967,10 @@
 	qcom,panel_voltage_vddr = <1 3000000 3200000 3300000>;
 };
 
+&mdss_dsi_phy0 {
+	oplus,dsi-pll-ssc-disalbed;
+};
+
+&mdss_dsi_phy1 {
+	oplus,dsi-pll-ssc-disalbed;
+};

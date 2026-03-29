@@ -898,9 +898,9 @@
 &oplus_chg_comm {
 	oplus_spec,iterm-ma = <375>;
 	oplus_spec,fcc-gear-thr-mv = <4180>;
-	oplus_spec,fv-mv = <4500 4500 4500 4500 4500 4500 4480 4130 4130>;
-	oplus_spec,sw-fv-mv = <4450 4450 4450 4450 4450 4450 4430 4080 4080>;
-	oplus_spec,sw-over-fv-mv = <4508 4508 4508 4508 4508 4508 4488 4138 4138>;
+	oplus_spec,fv-mv = <4490 4490 4490 4490 4490 4490 4470 4130 4130>;
+	oplus_spec,sw-fv-mv = <4440 4440 4440 4440 4440 4440 4420 4080 4080>;
+	oplus_spec,sw-over-fv-mv = <4498 4498 4498 4498 4498 4498 4478 4138 4138>;
 
 	oplus_spec,vbat_uv_thr_mv = <3300>;
 	oplus_spec,vbat_charging_uv_thr_mv = <3200>;

@@ -135,6 +135,12 @@ config OPLUS_GAUGE_NFG8011B
 	help
 	  Say Y here to declare GAUGE NFG8011B support
 
+config OPLUS_GAUGE_BQ28Z610_RA
+	bool "GAUGE BQ28Z610 RA support"
+	default n
+	help
+	  Say Y here to declare GAUGE BQ28Z610 RA support
+
 config OPLUS_GAUGE_CW2217B
 	bool "GAUGE CW2217B support"
 	help
@@ -182,6 +188,16 @@ config OPLUS_PHY_SC8547D
 	depends on OPLUS_UFCS_CLASS
 	help
 	  Say Y here to declare sc8547d voocphy && ufcs phy support
+
+config OPLUS_BOOST_SC83107
+	bool "enable hybrid boost sc83107"
+	help
+	  Say Y here to declare hybrid boost sc83107 support
+
+config OPLUS_VOOCPHY_SC8527
+	bool "enable REG CP sc8527"
+	help
+	  Say Y here to declare REG CP sc8527 support
 
 config OPLUS_WIRELESS_NU1619
 	bool "oplus wireless nu1619 support"

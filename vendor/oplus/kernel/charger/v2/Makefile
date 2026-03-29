@@ -62,6 +62,7 @@ oplus_chg_v2-y += oplus_chg_pps.o
 oplus_chg_v2-y += oplus_batt_bal.o
 oplus_chg_v2-y += oplus_chg_mutual.o
 oplus_chg_v2-y += oplus_reverse_chg.o
+oplus_chg_v2-y += oplus_dischg_boost.o
 oplus_chg_v2-$(CONFIG_OPLUS_CHG_PARALLEL) += oplus_parallel.o
 
 oplus_chg_v2-y += gauge_ic/oplus_hal_bq27541.o
@@ -70,6 +71,7 @@ oplus_chg_v2-$(CONFIG_OPLUS_GAUGE_BQ27Z561) += gauge_ic/oplus_hal_bq27z561.o
 oplus_chg_v2-$(CONFIG_OPLUS_GAUGE_NFG8011B) += gauge_ic/oplus_hal_nfg8011b.o
 oplus_chg_v2-$(CONFIG_OPLUS_GAUGE_CW2217B) += gauge_ic/oplus_hal_cw2217b.o
 oplus_chg_v2-$(CONFIG_OPLUS_GAUGE_SN28Z729) += gauge_ic/oplus_hal_sn28z729.o
+oplus_chg_v2-$(CONFIG_OPLUS_GAUGE_BQ28Z610_RA) += gauge_ic/oplus_hal_bq28z610.o
 
 oplus_chg_v2-y += vooc_ic/oplus_hal_rk826.o
 oplus_chg_v2-y += vooc_ic/oplus_hal_op10.o
@@ -92,6 +94,7 @@ oplus_chg_v2-y += hal/oplus_virtual_platufcs.o
 oplus_chg_v2-y += hal/oplus_virtual_batt_bal.o
 oplus_chg_v2-y += hal/oplus_virtual_level_shift.o
 oplus_chg_v2-y += hal/oplus_virtual_reverse_chg.o
+oplus_chg_v2-y += hal/oplus_virtual_boost.o
 
 oplus_chg_v2-y += mms/oplus_mms.o
 oplus_chg_v2-y += mms/oplus_msg_filter.o
@@ -109,7 +112,9 @@ oplus_chg_v2-y += strategy/oplus_strategy_pps_ufcs_curve_v2.o
 oplus_chg_v2-y += strategy/oplus_strategy_ddrc.o
 oplus_chg_v2-y += strategy/oplus_strategy_ddrc_v2.o
 oplus_chg_v2-y += strategy/oplus_strategy_battery_smooth.o
+oplus_chg_v2-y += strategy/oplus_strategy_volt_fastchg_allow.o
 oplus_chg_v2-y += strategy/oplus_strategy_pcc.o
+oplus_chg_v2-y += strategy/oplus_strategy_pcc_v2.o
 oplus_chg_v2-y += monitor/oplus_monitor_core.o
 oplus_chg_v2-y += monitor/oplus_chg_track.o
 oplus_chg_v2-y += monitor/oplus_chg_exception.o
@@ -176,6 +181,7 @@ oplus_chg_v2-$(CONFIG_OPLUS_CHG_VOOCPHY_CHGLIB) += voocphy/chglib/oplus_chglib.o
 oplus_chg_v2-$(CONFIG_OPLUS_VOOCPHY_MASTER_SC8547) += voocphy/phy/oplus_sc8547.o
 oplus_chg_v2-$(CONFIG_OPLUS_VOOCPHY_SLAVE_SC8547) += voocphy/phy/oplus_sc8547_slave.o
 oplus_chg_v2-$(CONFIG_OPLUS_VOOCPHY_SC8517) += voocphy/phy/oplus_sc8517.o
+oplus_chg_v2-$(CONFIG_OPLUS_VOOCPHY_SC8527) += voocphy/phy/oplus_sc8527.o
 oplus_chg_v2-$(CONFIG_OPLUS_VOOCPHY_MAX77939) += voocphy/phy/oplus_max77939.o
 oplus_chg_v2-$(CONFIG_OPLUS_VOOCPHY_HL7138) += voocphy/phy/oplus_hl7138.o
 oplus_chg_v2-$(CONFIG_OPLUS_VOOCPHY_SLAVE_HL7138) += voocphy/phy/oplus_hl7138_slave.o
@@ -198,6 +204,8 @@ oplus_chg_v2-$(CONFIG_OPLUS_WIRELESS_NU1669) += wireless_ic/oplus_hal_nu1669.o
 oplus_chg_v2-$(CONFIG_OPLUS_WIRELESS_P9415) += wireless_ic/oplus_hal_p9415.o
 oplus_chg_v2-$(CONFIG_OPLUS_WIRELESS_SC96257) += wireless_ic/oplus_hal_sc96257.o
 oplus_chg_v2-$(CONFIG_OPLUS_CHARGEPUMP_HL7227) += chargepump_ic/oplus_hal_hl7227.o
+
+oplus_chg_v2-$(CONFIG_OPLUS_BOOST_SC83107) += boost_ic/oplus_sc83107.o
 
 oplus_chg_v2-$(CONFIG_OPLUS_DEBUG_AUTH) += debug/oplus_debug_auth.o
 

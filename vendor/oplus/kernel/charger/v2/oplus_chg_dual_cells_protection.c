@@ -381,11 +381,12 @@ static void oplus_protection_fcc_check(struct oplus_dual_cells_protection *chip)
 static void oplus_protection_integral_fcc_cal(struct oplus_dual_cells_protection *chip)
 {
 	int capacity = 0;
-	int ibat = -chip->ibat_ma;
+        int ibat = 0;
 	if (!chip) {
 		chg_err("chip is null");
 		return;
 	}
+        ibat = -chip->ibat_ma;
 
 	if (!chip->is_temp_normal) {
 		chip->intfcc_valid = false;
@@ -777,11 +778,8 @@ static void oplus_dual_cells_protect_track_work(struct work_struct *work)
 static void oplus_protection_batt_check_work(struct work_struct *work)
 {
 	struct delayed_work *dwork = to_delayed_work(work);
-	struct oplus_dual_cells_protection *chip =
-		container_of(dwork, struct oplus_dual_cells_protection, batt_check_work);
-
-	if (!chip)
-		return;
+        struct oplus_dual_cells_protection *chip = container_of(
+			dwork, struct oplus_dual_cells_protection, batt_check_work);
 
 	oplus_protection_integral_fcc_cal(chip);
 

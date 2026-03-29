@@ -243,6 +243,7 @@ def define_oplus_chg_v2_module():
         "v2/hal/oplus_virtual_batt_bal.c",
         "v2/hal/oplus_virtual_level_shift.c",
         "v2/hal/oplus_virtual_reverse_chg.c",
+        "v2/hal/oplus_virtual_boost.c",
         "v2/mms/oplus_mms.c",
         "v2/mms/oplus_msg_filter.c",
         "v2/mms/oplus_mms_gauge.c",
@@ -258,11 +259,14 @@ def define_oplus_chg_v2_module():
         "v2/strategy/oplus_strategy_ddrc.c",
         "v2/strategy/oplus_strategy_ddrc_v2.c",
         "v2/strategy/oplus_strategy_battery_smooth.c",
+        "v2/strategy/oplus_strategy_volt_fastchg_allow.c",
         "v2/strategy/oplus_strategy_pcc.c",
+        "v2/strategy/oplus_strategy_pcc_v2.c",
         "v2/monitor/oplus_monitor_core.c",
         "v2/monitor/oplus_chg_track.c",
         "v2/monitor/oplus_chg_exception.c",
-        "v2/plat_ufcs/plat_ufcs_notify.c"
+        "v2/plat_ufcs/plat_ufcs_notify.c",
+        "v2/oplus_dischg_boost.c"
     ]) + [
         ":oplus_chg_v2_ic_cfg"
     ]
@@ -292,6 +296,11 @@ def define_oplus_chg_v2_module():
         "CONFIG_OPLUS_GAUGE_SN28Z729": {
             True: [
                 "v2/gauge_ic/oplus_hal_sn28z729.c"
+            ],
+        },
+        "CONFIG_OPLUS_GAUGE_BQ28Z610_RA": {
+            True: [
+                "v2/gauge_ic/oplus_hal_bq28z610.c"
             ],
         },
         "CONFIG_OPLUS_CHG_IC_DEBUG": {
@@ -403,6 +412,11 @@ def define_oplus_chg_v2_module():
                 "v2/voocphy/phy/oplus_sc8517.c"
             ],
         },
+        "CONFIG_OPLUS_VOOCPHY_SC8527": {
+            True: [
+                "v2/voocphy/phy/oplus_sc8527.c"
+            ],
+        },
         "CONFIG_OPLUS_VOOCPHY_MAX77939": {
             True: [
                 "v2/voocphy/phy/oplus_max77939.c"
@@ -481,6 +495,11 @@ def define_oplus_chg_v2_module():
         "CONFIG_OPLUS_CHARGEPUMP_HL7227": {
             True: [
                 "v2/chargepump_ic/oplus_hal_hl7227.c"
+            ],
+        },
+        "CONFIG_OPLUS_BOOST_SC83107": {
+            True: [
+                "v2/boost_ic/oplus_sc83107.c"
             ],
         },
         "CONFIG_OPLUS_SEC_IC_SC5891": {

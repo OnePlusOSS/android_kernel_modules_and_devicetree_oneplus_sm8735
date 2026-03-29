@@ -410,6 +410,9 @@
 					OPLUS_IC_FUNC_GAUGE_GET_VCT
 					OPLUS_IC_FUNC_GAUGE_GET_GAUGE_R_INFO
 					OPLUS_IC_FUNC_GAUGE_GET_BATT_SOC_CENTI
+					OPLUS_IC_FUNC_GAUGE_FCC_VDELTA_CHECK
+					OPLUS_IC_FUNC_GAUGE_FFC_T_RA_CHECK
+					OPLUS_IC_FUNC_GAUGE_FFC_RA0_CHECK
 				>;
 				virqs = <
 					OPLUS_IC_VIRQ_ERR
@@ -692,6 +695,10 @@
 		oplus_spec,ffc-temp-thr = <120 210 350 440>;
 		oplus_spec,wired-ffc-step-max = <2>;
 		oplus_spec,wired-ffc-fv-mv = <4590 4590>;
+		oplus_spec,bdd-vbatdiff-mv = <50>;
+		oplus_spec,bdd-enter-current-ma = <100>;
+		oplus_spec,bdd-enter-voltage-mv = <200>;
+		oplus_spec,bdd-vbatdiff-timeout-min = <10080>;
 
 		oplus_spec,wired-ffc-fv-cutoff-mv = <4545 4515 4500
 						     4515 4505 4490>;
